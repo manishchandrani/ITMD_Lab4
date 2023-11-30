@@ -94,6 +94,10 @@
         width: 100%;
         margin-bottom: 10px;
     }
+     #btn-primary, #btn-secondary {
+        display: block;
+        margin: 0 auto;
+    }
 
     
 }
