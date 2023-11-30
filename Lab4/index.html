@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyTrack</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> 
+    <script src="script.js" defer></script>
+    
+</head>
+<body>
+    <img id="background-image" src="./images/Background.jpg" alt="Background Image">
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="text-center mb-4 skytrack-title">SkyTrack</h1>
+                <div id="error-message" class="alert alert-danger" style="display: none;"></div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="userLocation" placeholder="Enter location...">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button" onclick="appModule.getLocationAndTimings()">Get Timings</button>
+                            <button class="btn btn-secondary" type="button" onclick="appModule.getCurrentLocation()">Get Current Location</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row result-container">
+                    <div class="col-md-6 skytrack-today-section" id="todaySection" style="display: none;">
+                        <div class="card result">
+                            <div class="card-body">
+                                <h2>Today</h2>
+                                <div class="time-info">
+                                    <p><i class="fas fa-sun"></i> Sunrise: <span id="todaySunrise"></span></p>
+                                    <p><i class="fas fa-moon"></i> Sunset: <span id="todaySunset"></span></p>
+                                    <p><i class="fas fa-arrow-up"></i> Dawn: <span id="todayDawn"></span></p>
+                                    <p><i class="fas fa-arrow-down"></i> Dusk: <span id="todayDusk"></span></p>
+                                    <p><i class="far fa-clock"></i> Day Length: <span id="todayDayLength"></span></p>
+                                    <p><i class="fas fa-sun"></i> Solar Noon: <span id="todaySolarNoon"></span></p>
+                                    <p><i class="far fa-clock"></i> Time Zone: <span id="todayTimeZone"></span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 skytrack-tomorrow-section" id="tomorrowSection" style="display: none;">
+                        <div class="card result">
+                            <div class="card-body">
+                                <h2>Tomorrow</h2>
+                                <div class="time-info">
+                                    <p><i class="fas fa-sun"></i> Sunrise: <span id="tomorrowSunrise"></span></p>
+                                    <p><i class="fas fa-moon"></i> Sunset: <span id="tomorrowSunset"></span></p>
+                                    <p><i class="fas fa-arrow-up"></i> Dawn: <span id="tomorrowDawn"></span></p>
+                                    <p><i class="fas fa-arrow-down"></i> Dusk: <span id="tomorrowDusk"></span></p>
+                                    <p><i class="far fa-clock"></i> Day Length: <span id="tomorrowDayLength"></span></p>
+                                    <p><i class="fas fa-sun"></i> Solar Noon: <span id="tomorrowSolarNoon"></span></p>
+                                    <p><i class="far fa-clock"></i> Time Zone: <span id="tomorrowTimeZone"></span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer text-right fixed-bottom mr-3 mb-3">
+        <p>Powered by <a href="https://sunrisesunset.io/" target="_blank">SunriseSunset.io</a></p>
+    </footer>
+</body>
+</html>

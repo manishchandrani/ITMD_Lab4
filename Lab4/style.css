@@ -1,0 +1,100 @@
+#background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensures the image stays in the background */
+}
+
+.result-container {
+    margin-top: 20px;
+}
+
+.time-info p {
+    margin-bottom: 5px;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.skytrack-title {
+    color: #FFA500; 
+    
+}
+
+.skytrack-today-section .card {
+    background-color: #FFA500; 
+    color: white; 
+}
+
+.skytrack-tomorrow-section .card {
+    background-color: #FFA500; 
+    color: white; 
+}
+
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.footer {
+    color: white;
+}
+
+.footer a {
+    color: #cd820a;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        background-size: auto;
+    }
+
+    .result-container {
+        margin-top: 10px;
+    }
+
+    .card {
+        box-shadow: none;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .card-body {
+        text-align: center;
+        padding: 20px;
+    }
+
+    #userLocation {
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    
+}
+
