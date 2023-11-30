@@ -90,14 +90,17 @@
         width: 100%;
     }
 
+    .input-group {
+        flex-direction: column; 
+    }
+
     .btn {
         width: 100%;
         margin-bottom: 10px;
     }
-     #btn-primary, #btn-secondary {
-        display: block;
-        margin: 0 auto;
-    }
+    .btn-primary, .btn-secondary {
+        text-align: center;
+    } 
 
     
 }
